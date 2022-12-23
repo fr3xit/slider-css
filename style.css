@@ -104,6 +104,10 @@ input[name="slider"] {
 	margin-left: calc(100% / 4 * -2);
 }
 
-/* #slide-4:checked ~ .slides .slide--guide {
-	margin-left: calc(100% / 4 * -3);
-} */
+/* Checked dot */
+
+#slide-1:checked ~ .slider__control .slider__dots label[for="slide-1"],
+#slide-2:checked ~ .slider__control .slider__dots label[for="slide-2"],
+#slide-3:checked ~ .slider__control .slider__dots label[for="slide-3"] {
+	background-color: var(--c-accent__three);
+}
