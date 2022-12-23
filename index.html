@@ -15,40 +15,53 @@
 			<header class="header">
 				<h1 class="h1">Slider</h1>
 			</header>
+
 			<main class="main">
 				<section class="section">
 					<h2 class="h2">Slider</h2>
 
 					<div class="slider middle">
+						<div class="input-box">
+
+						</div>
+
 						<div class="slides">
-							<input type="radio" name="r" id="r1" checked />
-							<input type="radio" name="r" id="r2" />
-							<input type="radio" name="r" id="r3" />
-							<input type="radio" name="r" id="r4" />
+							<input type="radio" name="slider" id="slide-1" checked />
+							<input type="radio" name="slider" id="slide-2" />
+							<input type="radio" name="slider" id="slide-3" />
+							<input type="radio" name="slider" id="slide-4" />
 
 							<div class="slide s1">
 								<img src="./img/1.jpg" alt="Slide" />
 							</div>
+
 							<div class="slide">
 								<img src="./img/2.jpg" alt="Slide" />
 							</div>
+
 							<div class="slide">
 								<img src="./img/3.jpg" alt="Slide" />
 							</div>
+
 							<div class="slide">
 								<img src="./img/4.jpg" alt="Slide" />
 							</div>
 						</div>
 
-						<div class="navigation">
-							<label class="bar" for="r1"></label>
-							<label class="bar" for="r2"></label>
-							<label class="bar" for="r3"></label>
-							<label class="bar" for="r4"></label>
+						<div class="slider__control">
+							<div class="slider__arrows arrows"></div>
+
+							<div class="slider__dots">
+								<label class="slider__dot" for="slide-1"></label>
+								<label class="slider__dot" for="slide-2"></label>
+								<label class="slider__dot" for="slide-3"></label>
+								<label class="slider__dot" for="slide-4"></label>
+							</div>
 						</div>
 					</div>
 				</section>
 			</main>
+
 			<footer class="footer"></footer>
 		</div>
 		<script src="./src/js/index.js"></script>

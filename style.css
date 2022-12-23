@@ -29,9 +29,9 @@ body {
 	border: 10px solid #fff;
 }
 
-input[name="r"] {
-	position: absolute;
-	visibility: hidden;
+input[name="slider"] {
+	/* position: absolute;
+	visibility: hidden; */
 }
 
 .slides {
@@ -52,8 +52,8 @@ input[name="r"] {
 	object-fit: cover;
 }
 
-/* Navigation */
-.navigation {
+/* Control */
+.slider__dots {
 	position: absolute;
 	bottom: 16px;
 	left: 50%;
@@ -63,7 +63,7 @@ input[name="r"] {
 	transform: translateX(-50%);
 }
 
-.bar {
+.slider__dot {
 	width: 30px;
 	height: 8px;
 	margin: 6px;
@@ -75,24 +75,24 @@ input[name="r"] {
 	transition: 0.3s ease;
 }
 
-.bar:hover {
+.slider__dot:hover {
 	opacity: 1;
 	transform: scale(1.2);
 }
 
 /* Checked */
-#r1:checked ~ .s1 {
-margin-left: 0;
+#slide-1:checked ~ .s1 {
+	margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
-margin-left: -25%;
+#slide-2:checked ~ .s1 {
+	margin-left: -25%;
 }
 
-#r3:checked ~ .s1 {
-margin-left: -50%;
+#slide-3:checked ~ .s1 {
+	margin-left: -50%;
 }
 
-#r4:checked ~ .s1 {
-margin-left: -75%;
+#slide-4:checked ~ .s1 {
+	margin-left: -75%;
 }
