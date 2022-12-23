@@ -1,9 +1,14 @@
 :root {
 	--c-bg: #000;
+	--c-accent__one: #8140b3;
+	--c-accent__two: #3d8ecc;
+	--c-accent__three: #a46218;
 }
+
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -26,7 +31,9 @@ body {
 	overflow: hidden;
 
 	background-color: var(--c-bg);
-	border: 10px solid #fff;
+	border: 3px solid var(--c-accent__two);
+	border-radius: 30px;
+	box-shadow: 0 0 10px var(--c-accent__two);
 }
 
 input[name="slider"] {
@@ -70,29 +77,33 @@ input[name="slider"] {
 
 	cursor: pointer;
 	opacity: 0.7;
-	background-color: #ddd;
+	background-color: var(--c-bg);
+	box-shadow: 0 0 10px var(--c-bg);
 	border-radius: 10px;
 	transition: 0.3s ease;
 }
 
 .slider__dot:hover {
+	background-color: var(--c-accent__one);
+	box-shadow: 0 0 10px var(--c-accent__one);
+
 	opacity: 1;
 	transform: scale(1.2);
 }
 
 /* Checked */
-#slide-1:checked ~ .s1 {
+#slide-1:checked ~ .slides .slide_guide {
 	margin-left: 0;
 }
 
-#slide-2:checked ~ .s1 {
+#slide-2:checked ~ .slides .slide_guide {
 	margin-left: -25%;
 }
 
-#slide-3:checked ~ .s1 {
+#slide-3:checked ~ .slides .slide_guide {
 	margin-left: -50%;
 }
 
-#slide-4:checked ~ .s1 {
+#slide-4:checked ~ .slides .slide_guide {
 	margin-left: -75%;
 }
