@@ -92,18 +92,18 @@ input[name="slider"] {
 }
 
 /* Checked */
-#slide-1:checked ~ .slides .slide_guide {
+#slide-1:checked ~ .slides .slide--guide {
 	margin-left: 0;
 }
 
-#slide-2:checked ~ .slides .slide_guide {
-	margin-left: -25%;
+#slide-2:checked ~ .slides .slide--guide {
+	margin-left: calc(100% / 4 * -1);
 }
 
-#slide-3:checked ~ .slides .slide_guide {
-	margin-left: -50%;
+#slide-3:checked ~ .slides .slide--guide {
+	margin-left: calc(100% / 4 * -2);
 }
 
-#slide-4:checked ~ .slides .slide_guide {
-	margin-left: -75%;
+#slide-4:checked ~ .slides .slide--guide {
+	margin-left: calc(100% / 4 * -3);
 }
