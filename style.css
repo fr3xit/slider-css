@@ -49,14 +49,14 @@ input[name="slider"] {
 	transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.slide {
-	width: calc(100% / 3);
-	height: 100%;
-}
-
 .slides:hover ~ .slider__control .slider__arrow {
 	opacity: 0.3;
 	transition: 0.9s linear;
+}
+
+.slide {
+	width: calc(100% / 3);
+	height: 100%;
 }
 
 .slide--guide {
