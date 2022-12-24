@@ -54,6 +54,11 @@ input[name="slider"] {
 	height: 100%;
 }
 
+.slides:hover ~ .slider__control .slider__arrow {
+	opacity: 0.3;
+	transition: 0.9s linear;
+}
+
 .slide--guide {
 	animation: sliderAnimate 10s infinite ease;
 }
@@ -116,9 +121,43 @@ input[name="slider"] {
 	opacity: 1;
 	transform: scale(1.2);
 }
+/* Arrows */
+.slider__arrows {
+	position: absolute;
+	top: 50%;
+	z-index: 1000;
+	transform: translateY(-50%);
+
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 30px;
+}
+
+.slider__arrow {
+	display: none;
+	min-width: 50px;
+	min-height: 50px;
+
+	text-align: center;
+	padding-top: 15px;
+
+	color: #fff;
+	background-color: var(--c-bg);
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0;
+	transition: 0.3s linear;
+}
+
+.slider__arrow:hover {
+	opacity: 1;
+	background-color: var(--c-accent__one);
+	transform: scale(1.2);
+}
 
 /* Checked */
-slide-1:checked ~ .slide--guide {
+#slide-1:checked ~ .slide--guide {
 	margin-left: 0;
 	animation: none;
 }
@@ -134,9 +173,25 @@ slide-1:checked ~ .slide--guide {
 }
 
 /* Checked dot */
-
 #slide-1:checked ~ .slider__control .slider__dots label[for="slide-1"],
 #slide-2:checked ~ .slider__control .slider__dots label[for="slide-2"],
 #slide-3:checked ~ .slider__control .slider__dots label[for="slide-3"] {
 	background-color: var(--c-accent__three);
+}
+
+/* Checked arrows */
+#slide-1:checked ~ .slider__control .slider__arrows {
+	justify-content: end;
+}
+#slide-1:checked ~ .slider__control .slider__arrows label[for="slide-2"] {
+	display: block;
+}
+
+#slide-2:checked ~ .slider__control .slider__arrows label[for="slide-1"],
+#slide-2:checked ~ .slider__control .slider__arrows label[for="slide-3"] {
+	display: block;
+}
+
+#slide-3:checked ~ .slider__control .slider__arrows label[for="slide-2"] {
+	display: block;
 }
